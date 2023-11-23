@@ -19,13 +19,15 @@ namespace KCHC
             // Initialize and set the Artists collection with your data
             Artists = new ObservableCollection<Artist>
             {
-                new Artist { PhotoPath = "SOR.jpg", Name = "Swarm Of Rats", Description = "Katerinian HC band" },
-                new Artist { PhotoPath = "SAD.jpg", Name = "S.A.D.", Description = "A creation of destruction and pain" },
-                new Artist { PhotoPath = "Libys.jpg", Name = "Libys", Description = "Katerinian Indie Star" },
-                // Add more artists as needed
+                new Artist {PhotoPath = "Akatalogistoi.jpg", Name="Akatalogistoi", Description = "Katerinian Hardcopunk"},
+                new Artist {PhotoPath = "Killathea.jpg", Name="Killathea", Description = "RnB"},
+                new Artist { PhotoPath = "Libys.jpg", Name = "Libys", Description = "Indie" },
+                new Artist {PhotoPath = "Mariospol.jpg", Name="Marios Pol", Description = "DJ and Laika"},
+                new Artist { PhotoPath = "SAD.jpg", Name = "S.A.D.", Description = "Folk country Deathcore" },
+                new Artist { PhotoPath = "SOR.jpg", Name = "Swarm Of Rats", Description = "Hardcore" },
+                new Artist { PhotoPath = "TaratsaParadeisou.jpg", Name = "Taratsa Paradeisou", Description = "Blues Indie"}
             };
-
-            BindingContext = Artists;
+            BindingContext = this;
         }
     }
 }
