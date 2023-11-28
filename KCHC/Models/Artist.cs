@@ -14,7 +14,8 @@ namespace KCHC.Models
         public string YoutubeAccountUrl { get; set; } = string.Empty;
         public string BandCampAccountUrl { get; set; } = string.Empty;
         public string ExtraDescription { get; set; } = string.Empty;
-        public DateTime DateTime { get; set; }
+        public bool IsABand { get; set; } = false;
+        public DateTime DateTime { get; set; } = DateTime.MinValue;
 
         /// <summary>
         /// Not full Constructor. This constructor is only for first page
@@ -28,6 +29,21 @@ namespace KCHC.Models
             PhotoPath = photoPath;
             Description = description;
         }
+
+        /// <summary>
+        /// Not full Constructor. This constructor is only for first page and configuring if its a band or not
+        /// </summary>
+        /// <param name="name"> The Name of the Artist</param>
+        /// <param name="photoPath">The photopath of the artist inside this solution</param>
+        /// <param name="description">General description about the artist</param>
+        public Artist(string name, string photoPath, string description, bool isaband)
+        {
+            Name = name;
+            PhotoPath = photoPath;
+            Description = description;
+            IsABand = isaband;
+        }
+
 
         /// <summary>
         /// Empty Constructor

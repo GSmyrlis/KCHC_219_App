@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KCHC.ArtistPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <!-- Row for Image and Data -->
+                    <RowDefinition Height="60" />
+                    <!-- Row for Connections -->
+                </Grid.RowDefinitions>
+                <StackLayout x:Name="StackAll" VerticalOptions="FillAndExpand">
+                    <Image x:Name="ImageArtist" Source="kchc.ico" HeightRequest="150" Aspect="AspectFit" VerticalOptions="Start"/>
+                    <StackLayout x:Name="GridForData" VerticalOptions="Fill" Spacing="30">
+                            <!-- Artist Name -->
+                        <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Start"/>
+                            <!-- Artist Description -->
+                        <Label Text="{Binding ExtraDescription}" FontSize="18" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="10" LineBreakMode="WordWrap" />
+                    </StackLayout>
+                </StackLayout>
+
+                <Grid x:Name="GridForConnections" HeightRequest="40" VerticalOptions="End" Grid.Row="1">
+
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
