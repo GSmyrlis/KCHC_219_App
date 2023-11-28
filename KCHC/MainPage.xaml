@@ -2,18 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KCHC.MainPage">
-    <Grid VerticalOptions="CenterAndExpand">
-        <Image Source="kchc.ico" HeightRequest="300" Aspect="AspectFill"/>
-        <CarouselView ItemsSource="{Binding Artists}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
-                        <Image Source="{Binding PhotoPath}" HeightRequest="300" Aspect="AspectFill" VerticalOptions="CenterAndExpand"/>
-                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="24" TextColor="White" HorizontalOptions="Center"/>
-                        <Label Text="{Binding Description}" FontSize="18" TextColor="White" HorizontalOptions="Center"/>
-                    </StackLayout>
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
+
+
+    <Grid>
+    <Image Source="kchc.ico" HeightRequest="300" Aspect="AspectFill"/>
+        <Grid>
+            <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked"></Button>
+            <Grid VerticalOptions="CenterAndExpand">
+            <!-- Additional Image in the top-right corner -->
+            <CarouselView ItemsSource="{Binding Artists}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" InputTransparent="True">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+                            <Image Source="{Binding PhotoPath}" HeightRequest="300" Aspect="AspectFill" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding Description}" FontSize="18" TextColor="White" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+
+            <!-- IndicatorView -->
+            <IndicatorView IndicatorColor="LightGray" SelectedIndicatorColor="DarkGray" HeightRequest="30" />
+        </Grid>
+                </Grid>
     </Grid>
 </ContentPage>

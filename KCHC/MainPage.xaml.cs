@@ -16,6 +16,7 @@ namespace KCHC
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             // Initialize and set the Artists collection with your data
             Artists = new ObservableCollection<Artist>
             {
@@ -25,9 +26,18 @@ namespace KCHC
                 new Artist {PhotoPath = "Mariospol.jpg", Name="Marios Pol", Description = "DJ and Laika"},
                 new Artist { PhotoPath = "SAD.jpg", Name = "S.A.D.", Description = "Folk country Deathcore" },
                 new Artist { PhotoPath = "SOR.jpg", Name = "Swarm Of Rats", Description = "Hardcore" },
+                new Artist {PhotoPath = "Spyridwn.JPG", Name = "Spyridon", Description = "Hard Indie Metal"},
                 new Artist { PhotoPath = "TaratsaParadeisou.jpg", Name = "Taratsa Paradeisou", Description = "Blues Indie"}
             };
             BindingContext = this;
+        }
+
+        private async void OnKinimatoramaImageClicked(object sender, EventArgs e)
+        {
+            if (Application.Current.MainPage?.Navigation != null)
+            {
+                await Application.Current.MainPage.Navigation.PushAsync(new KiminatoramaPage());
+            }
         }
     }
 }
