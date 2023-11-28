@@ -10,22 +10,22 @@
             <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked"></Button>
             <Grid VerticalOptions="CenterAndExpand">
             <!-- Additional Image in the top-right corner -->
-            <CarouselView ItemsSource="{Binding Artists}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" InputTransparent="True">
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
-                            <Image Source="{Binding PhotoPath}" HeightRequest="300" Aspect="AspectFill" VerticalOptions="CenterAndExpand"/>
-                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                            <Label Text="{Binding Description}" FontSize="18" TextColor="White" HorizontalOptions="Center"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
-
-
-            <!-- IndicatorView -->
-            <IndicatorView IndicatorColor="LightGray" SelectedIndicatorColor="DarkGray" HeightRequest="30" />
-        </Grid>
+                <CarouselView ItemsSource="{Binding Artists}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" InputTransparent="True">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+                                <Image Source="{Binding PhotoPath}" HeightRequest="300" Aspect="AspectFill" VerticalOptions="CenterAndExpand">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnImageTapped" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Description}" FontSize="18" TextColor="White" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </Grid>
                 </Grid>
     </Grid>
 </ContentPage>
