@@ -30,8 +30,32 @@ namespace KCHC
                 new Artist { PhotoPath = "TaratsaParadeisou.jpg", Name = "Taratsa Paradeisou", Description = "Blues Indie", IsABand = true}
             };
             BindingContext = this;
-
+            InitializeCustomIndicator(Artists.Count);
+            ArtistsCarousel.PositionChanged += OnPositionSelected;
         }
+        private void InitializeCustomIndicator(int totalItems)
+        {
+            for (int i = 0; i < totalItems; i++)
+            {
+                var boxView = new BoxView
+                {
+                    WidthRequest = 5,
+                    HeightRequest = 5,
+                    BackgroundColor = Color.Gray,
+                    Margin = new Thickness(5, 0)
+                };
+                CustomIndicator.Children.Add(boxView);
+            }
+        }
+        private void OnPositionSelected(object sender, PositionChangedEventArgs e)
+        {
+            // Update the custom indicator based on the selected position
+            for (int i = 0; i < CustomIndicator.Children.Count; i++)
+            {
+                CustomIndicator.Children[i].BackgroundColor = (i == e.CurrentPosition) ? Color.DarkRed : Color.DarkGray;
+            }
+        }
+
 
         private async void OnKinimatoramaImageClicked(object sender, EventArgs e)
         {

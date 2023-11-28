@@ -3,18 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KCHC.MainPage">
 
-
     <Grid>
-    <Image Source="kchc.ico" HeightRequest="300" Aspect="AspectFill"/>
+        <Image Source="kchc.ico" HeightRequest="300" Aspect="AspectFill"/>
         <Grid>
             <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked"></Button>
             <Grid VerticalOptions="CenterAndExpand">
-            <!-- Additional Image in the top-right corner -->
-                <CarouselView ItemsSource="{Binding Artists}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" InputTransparent="True">
+                <!-- Custom Indicator Layout -->
+                <StackLayout x:Name="CustomIndicator" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" HeightRequest="5">
+                    <!-- Indicators will be added dynamically in code-behind -->
+                </StackLayout>
+                <!-- Additional Image in the top-right corner -->
+                <CarouselView x:Name="ArtistsCarousel" ItemsSource="{Binding Artists}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" InputTransparent="True">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
-                                <Image Source="{Binding PhotoPath}" HeightRequest="300" Aspect="AspectFill" VerticalOptions="CenterAndExpand">
+                                <Image Source="{Binding PhotoPath}" HeightRequest="300" Aspect="AspectFit" VerticalOptions="CenterAndExpand">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnImageTapped" />
                                     </Image.GestureRecognizers>
@@ -26,6 +29,6 @@
                     </CarouselView.ItemTemplate>
                 </CarouselView>
             </Grid>
-                </Grid>
+        </Grid>
     </Grid>
 </ContentPage>
