@@ -2,12 +2,14 @@
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System;
+using KCHC.Models;
 
 namespace KCHC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ArtistPage : ContentPage
     {
+        private Models.Artist ShownArtist { get; set; } = new Models.Artist();
         public ArtistPage()
         {
             InitializeComponent();
@@ -15,6 +17,31 @@ namespace KCHC
         public ArtistPage(Models.Artist artist)
         {
             InitializeComponent();
+            ShowPage(artist);
+        }
+        // Helper method to create a social media button with an image
+        private Button CreateSocialButton(string imageName, string url)
+        {
+            return new Button
+            {
+                HeightRequest = 40, // Set the height of the button
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.End,
+                ImageSource = imageName,
+                Command = new Command(async () =>
+                {
+                    // Handle button click (e.g., open the URL)
+                    if (!string.IsNullOrEmpty(url))
+                    {
+                        await Launcher.OpenAsync(new Uri(url));
+                    }
+                })
+            };
+        }
+
+        public void ShowPage(Models.Artist artist)
+        {
+            ShownArtist = artist;
             BindingContext = artist;
             ImageArtist.Source = artist.PhotoPath;
             if (artist.DateTime != null && artist.DateTime != System.DateTime.MinValue)
@@ -48,26 +75,29 @@ namespace KCHC
                 GridForConnections.Children.Add(buttonYouTube, count++, 0);
             }
         }
-        // Helper method to create a social media button with an image
-        private Button CreateSocialButton(string imageName, string url)
+
+        private void OnSwipe(object sender, SwipedEventArgs e)
         {
-            return new Button
+            if (e.Direction == SwipeDirection.Right)
             {
-                HeightRequest = 40, // Set the height of the button
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.End,
-                ImageSource = imageName,
-                Command = new Command(async () =>
+                if (App.Artists.IndexOf(ShownArtist) - 1 >= 0)
                 {
-                    // Handle button click (e.g., open the URL)
-                    if (!string.IsNullOrEmpty(url))
-                    {
-                        await Launcher.OpenAsync(new Uri(url));
-                    }
-                })
-            };
+                    ShowPage(App.Artists[App.Artists.IndexOf(ShownArtist) - 1]);
+                    return;
+                }
+                ShowPage(App.Artists[App.Artists.Count - 1]);
+                return;
+            }
+            if (e.Direction == SwipeDirection.Left)
+            {
+                if (App.Artists.IndexOf(ShownArtist) + 1 >= App.Artists.Count)
+                {
+                    ShowPage(App.Artists[0]);
+                    return;
+                }
+                ShowPage(App.Artists[App.Artists.IndexOf(ShownArtist) + 1]);
+                return;
+            }
         }
-
-
     }
 }

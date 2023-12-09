@@ -13,7 +13,7 @@
                     <!-- Indicators will be added dynamically in code-behind -->
                 </StackLayout>
                 <!-- Additional Image in the top-right corner -->
-                <CarouselView x:Name="ArtistsCarousel" ItemsSource="{Binding Artists}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" InputTransparent="True">
+                <CarouselView x:Name="ArtistsCarousel" ItemsSource="{Binding}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" InputTransparent="True">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
