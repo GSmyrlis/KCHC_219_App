@@ -24,7 +24,8 @@ namespace KCHC
         {
             return new Button
             {
-                HeightRequest = 40, // Set the height of the button
+                HeightRequest = 45, // Set the height of the button
+                WidthRequest = 45,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.End,
                 ImageSource = imageName,
@@ -55,7 +56,7 @@ namespace KCHC
                 };
                 GridForData.Children.Add(createdOnLabel);
             }
-
+            GridForConnections.Children.Clear();
             int count = 0;
             if (!string.IsNullOrEmpty(artist.BandCampAccountUrl))
             {

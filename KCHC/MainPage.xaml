@@ -9,7 +9,7 @@
             <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked"></Button>
             <Grid VerticalOptions="CenterAndExpand">
                 <!-- Custom Indicator Layout -->
-                <StackLayout x:Name="CustomIndicator" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" HeightRequest="5">
+                <StackLayout x:Name="CustomIndicator" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" HeightRequest="5">
                     <!-- Indicators will be added dynamically in code-behind -->
                 </StackLayout>
                 <!-- Additional Image in the top-right corner -->
