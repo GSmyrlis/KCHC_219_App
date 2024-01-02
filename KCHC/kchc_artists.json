@@ -24,6 +24,24 @@
     "YoutubeAccountUrl": "https://www.youtube.com/@Libys",
     "BandCampAccountUrl": "https://libys.bandcamp.com/track/ifeellibys-5"
   },
+
+  {
+    "Name": "Taratsa Paradeisou",
+    "PhotoPath": "TaratsaParadeisou.jpg",
+    "Description": "Blues Indie",
+    "ExtraDescription": "No Extra Description is required for Taratsa Paradeisou",
+    "IsABand": true,
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/6mxsIAUaOuuaYYVSkQ0xM9",
+    "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
+  },
+  {
+    "Name": "Maura Tsigara",
+    "PhotoPath": "MauraTsigara.jpg",
+    "Description": "Meme emo rap",
+    "ExtraDescription": "Katahlipsi and Stress",
+    "IsABand": true,
+    "YoutubeAccountUrl": "https://www.youtube.com/@MauraTsigara"
+  },
   {
     "Name": "MayDay Music",
     "PhotoPath": "Mariospol.jpg",
