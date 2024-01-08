@@ -2,7 +2,7 @@
   {
     "Name": "Akatalogistoi",
     "PhotoPath": "Akatalogistoi.jpg",
-    "Description": "Katerinian Hardcopunk",
+    "Description": "Katerinian Hardcockpunk",
     "YoutubeAccountUrl": "https://www.youtube.com/watch?v=dGArrZ8m1MU",
     "ExtraDescription": "Spyke-Nesik-Sok Katerinian Hardcopunk band, 2014-2015",
     "IsABand": true
@@ -10,7 +10,7 @@
   {
     "Name": "Killathea",
     "PhotoPath": "Killathea.jpg",
-    "Description": "Emotional rap",
+    "Description": "Emotional Rap",
     "SpotifyAccountUrl": "https://open.spotify.com/artist/38fatBRI4r5wi7VReN7arO",
     "YoutubeAccountUrl": "https://www.youtube.com/@killathea307",
     "ExtraDescription": "Συναισθηματικό ραπ κατευθείαν από το καζάνι της τρέλας για ερωτικούς, αιρετικούς και τρελούς που είναι τουλάχιστον ευτυχείς."
@@ -24,16 +24,6 @@
     "YoutubeAccountUrl": "https://www.youtube.com/@Libys",
     "BandCampAccountUrl": "https://libys.bandcamp.com/track/ifeellibys-5"
   },
-
-  {
-    "Name": "Taratsa Paradeisou",
-    "PhotoPath": "TaratsaParadeisou.jpg",
-    "Description": "Blues Indie",
-    "ExtraDescription": "No Extra Description is required for Taratsa Paradeisou",
-    "IsABand": true,
-    "SpotifyAccountUrl": "https://open.spotify.com/artist/6mxsIAUaOuuaYYVSkQ0xM9",
-    "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
-  },
   {
     "Name": "Maura Tsigara",
     "PhotoPath": "MauraTsigara.jpg",
@@ -43,10 +33,18 @@
     "YoutubeAccountUrl": "https://www.youtube.com/@MauraTsigara"
   },
   {
-    "Name": "MayDay Music",
+    "Name": "Marios Pol",
     "PhotoPath": "Mariospol.jpg",
-    "Description": "DJ and Laika",
-    "ExtraDescription": "MariosPol",
+    "Description": "Rap kai kapsourotragouda",
+    "ExtraDescription": "Marios Poluxroniou",
+    "YoutubeAccountUrl": "https://www.youtube.com/@onlyrapsongsunreleased2138",
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/1rVQijAbNkYIeIcb5qeU7O?si=-LaiZ76xQ1m3zbSWrvqMUg"
+  },
+  {
+    "Name": "MayDay Music",
+    "PhotoPath": "mayday.jpg",
+    "Description": "DJ and Bliblikia",
+    "ExtraDescription": "The COOLest DJ In The World",
     "YoutubeAccountUrl": "https://www.youtube.com/@MariosDimitriou",
     "SpotifyAccountUrl": "https://open.spotify.com/user/11120416820",
     "BandCampAccountUrl": "https://maydayofc.bandcamp.com/"
@@ -54,7 +52,7 @@
   {
     "Name": "S.A.D.",
     "PhotoPath": "SAD.jpg",
-    "Description": "Folk country Deathcore",
+    "Description": "Folk Country Deathcore",
     "IsABand": true,
     "ExtraDescription": "Smileumenoi sta skotina ghetto tis elladas kai exontas epizisi polles aimatires siggrousis me ta tsonia apofasisame na peksoume rok mousiki",
     "BandCampAccountUrl": "https://sadsxolh.bandcamp.com/",
@@ -75,12 +73,13 @@
     "PhotoPath": "Spyridwn.JPG",
     "Description": "Hard Indie Metal",
     "SpotifyAccountUrl": "https://open.spotify.com/artist/12PgN4K4tut8SunQ9fBn76",
+    "YoutubeAccountUrl": "https://youtu.be/HaW5fOSwCOo?si=Gz-fO1wWx7xLP7J8",
     "ExtraDescription": "Dark hard indie Metal for those who are chosen. Created by Spyros Kreator"
   },
   {
     "Name": "Taratsa Paradeisou",
     "PhotoPath": "TaratsaParadeisou.jpg",
-    "Description": "Blues Indie",
+    "Description": "Indie EMO",
     "ExtraDescription": "No Extra Description is required for Taratsa Paradeisou",
     "IsABand": true,
     "SpotifyAccountUrl": "https://open.spotify.com/artist/6mxsIAUaOuuaYYVSkQ0xM9",
