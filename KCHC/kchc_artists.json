@@ -71,8 +71,8 @@
     "PhotoPath": "SOR.jpg",
     "Description": "Hardcore",
     "IsABand": true,
-    "SpotifyAccountUrl": "https://swarmofratshc219.bandcamp.com/",
-    "BandCampAccountUrl": "https://www.youtube.com/channel/UCnmh1PSVs-zCLSa5MCZOldg",
+    "BandCampAccountUrl": "https://swarmofratshc219.bandcamp.com/",
+    "YoutubeAccountUrl": "https://www.youtube.com/channel/UCnmh1PSVs-zCLSa5MCZOldg",
     "ExtraDescription": "A 4 piece hardcore band from Katerini est. 2014 Gio-Vocals George-Drums Soc-Guitar Chris-Bass K.CITY HARDCORE. -219-"
   },
   {
@@ -87,9 +87,26 @@
     "Name": "Taratsa Paradeisou",
     "PhotoPath": "TaratsaParadeisou.jpg",
     "Description": "Indie EMO",
-    "ExtraDescription": "No Extra Description is required for Taratsa Paradeisou",
+    "ExtraDescription": "Πως αλλιώς νομίζεις θα την παλεύαμε στην επαρχεία;",
     "IsABand": true,
     "SpotifyAccountUrl": "https://open.spotify.com/artist/6mxsIAUaOuuaYYVSkQ0xM9",
     "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
+  },
+  {
+    "Name": "Θεοχάρης",
+    "PhotoPath": "theosxarhs.jpg",
+    "Description": "Grindcore, Hardcore Punk",
+    "ExtraDescription": "Δημελές DIY Grindcore/Hardcore Punk σχήμα κατευθείαν από την κωλότρυπα της Νέας Νότιας Μακεδονίας",
+    "IsABand": true,
+    "BandCampAccountUrl": "https://theoharis.bandcamp.com/album/storage-room-rehearsal"
+  },
+  {
+    "Name": "Στεναχώρια χαμηλής ποιότητας",
+    "PhotoPath": "Στεναχώρια.JPG",
+    "Description": "Sad LoFi Indie",
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/27A7sKDEsFfyuvrTeRIHw3?si=eKM_9u8eQ8ynO_RkfMQe6A",
+    "YoutubeAccountUrl": "https://youtu.be/R0D2jJ-tn-E?si=JafQTOHntyOf5lXJ",
+    "BandCampAccountUrl": "https://libys.bandcamp.com/album/--2",
+    "ExtraDescription": "Libys' secret garden"
   }
 ]
