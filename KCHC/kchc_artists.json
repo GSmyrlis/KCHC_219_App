@@ -8,13 +8,6 @@
     "IsABand": true
   },
   {
-    "Name": "έβαν",
-    "PhotoPath": "evan.jfif",
-    "Description": "ελληνικη ινδιε εμο φολκ και όχι μόνο..",
-    "SpotifyAccountUrl": "https://open.spotify.com/artist/18ZQQi1nOI6p2YrK3dPQ51?si=_8-D5BNeRWq8NiKfRxOL_Q",
-    "YoutubeAccountUrl": "https://www.youtube.com/@EvanKakouris"
-  },
-  {
     "Name": "Killathea",
     "PhotoPath": "Killathea.jpg",
     "Description": "Emotional Rap",
@@ -98,6 +91,13 @@
     "IsABand": true,
     "SpotifyAccountUrl": "https://open.spotify.com/artist/6mxsIAUaOuuaYYVSkQ0xM9",
     "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
+  },
+  {
+    "Name": "έβαν",
+    "PhotoPath": "evan.jfif",
+    "Description": "ελληνικη ινδιε εμο φολκ και όχι μόνο..",
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/18ZQQi1nOI6p2YrK3dPQ51?si=_8-D5BNeRWq8NiKfRxOL_Q",
+    "YoutubeAccountUrl": "https://www.youtube.com/@EvanKakouris"
   },
   {
     "Name": "Θεοχάρης",
