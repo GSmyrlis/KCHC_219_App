@@ -58,7 +58,7 @@
   },
   {
     "Name": "Pizza Boston",
-    "PhotoPath": "Pizza Boston.jpg",
+    "PhotoPath": "PizzaBoston.jpg",
     "Description": "Hardcore punk",
     "IsABand": true,
     "ExtraDescription": "Ellhnofwno topikistiko KCHC apovrasma"
@@ -117,7 +117,7 @@
   },
   {
     "Name": "Στεναχώρια χαμηλής ποιότητας",
-    "PhotoPath": "Στεναχώρια.JPG",
+    "PhotoPath": "Stenahoria.jpg",
     "Description": "Sad LoFi Indie",
     "SpotifyAccountUrl": "https://open.spotify.com/artist/27A7sKDEsFfyuvrTeRIHw3?si=eKM_9u8eQ8ynO_RkfMQe6A",
     "YoutubeAccountUrl": "https://youtu.be/R0D2jJ-tn-E?si=JafQTOHntyOf5lXJ",
