@@ -57,6 +57,13 @@
     "BandCampAccountUrl": "https://maydayofc.bandcamp.com/"
   },
   {
+    "Name": "Pizza Boston",
+    "PhotoPath": "Pizza Boston.jpg",
+    "Description": "Hardcore punk",
+    "IsABand": true,
+    "ExtraDescription": "Ellhnofwno topikistiko KCHC apovrasma"
+  },
+  {
     "Name": "S.A.D.",
     "PhotoPath": "SAD.jpg",
     "Description": "Folk Country Deathcore",
