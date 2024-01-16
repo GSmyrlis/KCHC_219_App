@@ -17,7 +17,8 @@ namespace KCHC.Models
             this.Description = artistdata.Description;
             this.BandCampAccountUrl = artistdata.BandCampAccountUrl;
             this.YoutubeAccountUrl = artistdata.YoutubeAccountUrl;
-            this.SpotifyAccountUrl = artistdata.SpotifyAccountUrl; 
+            this.SpotifyAccountUrl = artistdata.SpotifyAccountUrl;
+            this.SoundcloudAccountUrl = artistdata.SoundcloudAccountUrl; 
             this.ContentImage = artistdata.ContentImage;
             Members = members;
         }
