@@ -100,6 +100,13 @@
     "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
   },
   {
+    "Name": "Aγχώνευτοι",
+    "PhotoPath": "Agxoneytoi",
+    "Description": "punk rock",
+    "ExtraDescription": "Υλικό που βρέθηκε σε μία κασέτα στο πατάρι από το '78;",
+    "IsABand": true
+  },
+  {
     "Name": "έβαν",
     "PhotoPath": "evan.jfif",
     "Description": "indie emo folk",
