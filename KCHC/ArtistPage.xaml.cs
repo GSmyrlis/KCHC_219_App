@@ -75,6 +75,12 @@ namespace KCHC
                 Button buttonYouTube = CreateSocialButton("youtube.jpg", artist.YoutubeAccountUrl);
                 GridForConnections.Children.Add(buttonYouTube, count++, 0);
             }
+
+            if (!string.IsNullOrEmpty(artist.SoundcloudAccountUrl))
+            {
+                Button buttonSoundcloud = CreateSocialButton("soundcloud.png", artist.SoundcloudAccountUrl);
+                GridForConnections.Children.Add(buttonSoundcloud, count++, 0);
+            }
         }
 
         private void OnSwipe(object sender, SwipedEventArgs e)
