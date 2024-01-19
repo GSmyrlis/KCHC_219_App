@@ -101,9 +101,10 @@
     "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
   },
   {
+
     "Name": "Aχώνευτοι",
     "PhotoPath": "Agxoneytoi",
-    "Description": "punk rock",
+    "Description": "Punk Rock",
     "ExtraDescription": "Υλικό που βρέθηκε σε μία κασέτα στο πατάρι από το '78;",
     "IsABand": true
   },
@@ -111,7 +112,7 @@
     "Name": "έβαν",
     "PhotoPath": "evan.jfif",
     "Description": "indie emo folk",
-    "ExtraDescription": "ελληνικη ινδιε εμο φολκ και όχι μόνο..",
+    "ExtraDescription": "ελληνικη ινδιε εμο φολκ και όχι μόνο...",
     "SpotifyAccountUrl": "https://open.spotify.com/artist/18ZQQi1nOI6p2YrK3dPQ51?si=_8-D5BNeRWq8NiKfRxOL_Q",
     "YoutubeAccountUrl": "https://www.youtube.com/@EvanKakouris"
   },
