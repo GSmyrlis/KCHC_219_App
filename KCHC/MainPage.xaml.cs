@@ -9,7 +9,6 @@ using Newtonsoft.Json;
 using System.IO;
 using Xamarin.Forms.Xaml;
 
-
 namespace KCHC
 {
     public partial class MainPage : ContentPage
