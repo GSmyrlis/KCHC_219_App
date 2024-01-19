@@ -18,7 +18,7 @@ namespace KCHC.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             // Find the resource ID of your MP3 file
-            int soundResourceId = Resource.Raw.emo;
+            int soundResourceId = Resource.Raw.Thanos;
 
             // Initialize MediaPlayer
             mediaPlayer = MediaPlayer.Create(this, soundResourceId);
