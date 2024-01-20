@@ -10,15 +10,15 @@ namespace KCHC.Droid
 {
     public class AudioService : IAudio
     {
+        MediaPlayer player = new MediaPlayer();
+
         public AudioService()
         {
         }
 
         public void PlayAudioFile(string fileName)
         {
-            var player = new MediaPlayer();
             var context = global::Android.App.Application.Context;
-
             // Assuming "emo" is a resource in the Raw folder
             var resourceId = context.Resources.GetIdentifier("emo", "raw", context.PackageName);
             var fd = context.Resources.OpenRawResourceFd(resourceId);
@@ -30,6 +30,11 @@ namespace KCHC.Droid
 
             player.SetDataSource(fd.FileDescriptor, fd.StartOffset, fd.Length);
             player.Prepare();
+        }
+
+        public void PauseAudio()
+        {
+            player.Pause();
         }
     }
 }

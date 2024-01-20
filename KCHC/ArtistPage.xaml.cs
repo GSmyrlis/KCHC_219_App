@@ -51,6 +51,7 @@ namespace KCHC
 
         public void ShowPage(Models.Artist artist)
         {
+            
             ShownArtist = artist;
             BindingContext = artist;
             ImageArtist.Source = artist.PhotoPath;
@@ -65,6 +66,7 @@ namespace KCHC
                 };
                 GridForData.Children.Add(createdOnLabel);
             }
+            
             GridForConnections.Children.Clear();
             int count = 0;
             if (!string.IsNullOrEmpty(artist.BandCampAccountUrl))

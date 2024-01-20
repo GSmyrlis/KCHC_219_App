@@ -7,5 +7,6 @@ namespace KCHC.Interfaces
     public interface IAudio
     {
         void PlayAudioFile(string fileName);
+        void PauseAudio();
     }
 }
