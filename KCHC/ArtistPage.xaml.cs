@@ -3,6 +3,7 @@ using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System;
 using KCHC.Models;
+using KCHC.Interfaces;
 
 namespace KCHC
 {
@@ -18,6 +19,14 @@ namespace KCHC
         {
             InitializeComponent();
             ShowPage(artist);
+            switch (ShownArtist.Name)
+            {
+                case "Taratsa Paradeisou":
+                    {
+                        DependencyService.Get<IAudio>().PlayAudioFile("emo.mp3");
+                        break;
+                    }
+            }
         }
         // Helper method to create a social media button with an image
         private Button CreateSocialButton(string imageName, string url)
