@@ -18869,7 +18869,19 @@ namespace KCHC.Droid
 		{
 			
 			// aapt resource value: 0x7F0E0000
-			public const int emo = 2131623936;
+			public const int Axoneutoi_Cassetetape = 2131623936;
+			
+			// aapt resource value: 0x7F0E0001
+			public const int emo = 2131623937;
+			
+			// aapt resource value: 0x7F0E0002
+			public const int PizzaBoston_60K100 = 2131623938;
+			
+			// aapt resource value: 0x7F0E0003
+			public const int PizzaBoston_Denthaseswseikaneis = 2131623939;
+			
+			// aapt resource value: 0x7F0E0004
+			public const int Thanos = 2131623940;
 			
 			static Raw()
 			{
