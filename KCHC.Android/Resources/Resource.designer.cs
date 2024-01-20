@@ -16727,7 +16727,10 @@ namespace KCHC.Droid
 			public const int tooltip_frame_light = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int youtube = 2131165349;
+			public const int wordsofhate = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int youtube = 2131165350;
 			
 			static Drawable()
 			{
@@ -18882,6 +18885,12 @@ namespace KCHC.Droid
 			
 			// aapt resource value: 0x7F0E0004
 			public const int Thanos = 2131623940;
+			
+			// aapt resource value: 0x7F0E0005
+			public const int WordsOfHate_Barricade_live = 2131623941;
+			
+			// aapt resource value: 0x7F0E0006
+			public const int WordsOfHate_Siwph_live = 2131623942;
 			
 			static Raw()
 			{

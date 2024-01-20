@@ -19,7 +19,7 @@
     "Name": "Kryptic Lynch Gang",
     "PhotoPath": "KRypticLynchGang.jpg",
     "Description": "Autistic Raps",
-    "YoutubeAccountUrl": "https://youtu.be/FCtm7t4ab7o?si=aZWmO-vM5CQ5s1yT",
+    "YoutubeAccountUrl": "https://www.youtube.com/watch?v=FCtm7t4ab7o",
     "ExtraDescription": "AκυκλοaφορυταRαππουθασεκανουνναπειςΑμανΠαναγιτσαμου."
   },
   {
@@ -100,6 +100,13 @@
     "IsABand": true,
     "SpotifyAccountUrl": "https://open.spotify.com/artist/6mxsIAUaOuuaYYVSkQ0xM9",
     "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
+  },
+  {
+    "Name": "Words Of Hate",
+    "PhotoPath": "wordsofhate.jpg",
+    "Description": "Hardcore Punk from Katerini est.2015",
+    "ExtraDescription": "Vocals:Panos Guitar:Spyros Bass:Soc Drums:Giorgos",
+    "IsABand": true
   },
   {
 
