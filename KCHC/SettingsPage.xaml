@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KCHC.SettingsPage"
+             Title="Settings">
+
+    <StackLayout>
+        <Switch x:Name="IntroMusicSwitch" IsToggled="{Binding IntroMusicEnabled}" />
+        <Label Text="Enable Intro Music" />
+
+        <Entry x:Name="FavoriteArtistEntry" Text="{Binding FavoriteArtist}" />
+        <Label Text="Favorite Artist" />
+
+        <Entry x:Name="BackgroundImageEntry" Text="{Binding BackgroundImage}" />
+        <Label Text="Background Image" />
+
+        <Button Text="Save" Clicked="OnSaveClicked" />
+    </StackLayout>
+
+</ContentPage>
