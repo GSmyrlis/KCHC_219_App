@@ -16700,31 +16700,34 @@ namespace KCHC.Droid
 			public const int SOR = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int spotify = 2131165340;
+			public const int soundcloud = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int Spyridwn = 2131165341;
+			public const int spotify = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int Stenahoria = 2131165342;
+			public const int Spyridwn = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int TaratsaParadeisou = 2131165343;
+			public const int Stenahoria = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int test_custom_background = 2131165344;
+			public const int TaratsaParadeisou = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int theosxarhs = 2131165345;
+			public const int test_custom_background = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int tooltip_frame_dark = 2131165346;
+			public const int theosxarhs = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int tooltip_frame_light = 2131165347;
+			public const int tooltip_frame_dark = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int youtube = 2131165348;
+			public const int tooltip_frame_light = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int youtube = 2131165349;
 			
 			static Drawable()
 			{
@@ -18866,7 +18869,19 @@ namespace KCHC.Droid
 		{
 			
 			// aapt resource value: 0x7F0E0000
-			public const int emo = 2131623936;
+			public const int Axoneutoi_Cassetetape = 2131623936;
+			
+			// aapt resource value: 0x7F0E0001
+			public const int emo = 2131623937;
+			
+			// aapt resource value: 0x7F0E0002
+			public const int PizzaBoston_60K100 = 2131623938;
+			
+			// aapt resource value: 0x7F0E0003
+			public const int PizzaBoston_Denthaseswseikaneis = 2131623939;
+			
+			// aapt resource value: 0x7F0E0004
+			public const int Thanos = 2131623940;
 			
 			static Raw()
 			{
