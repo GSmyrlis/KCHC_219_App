@@ -13,6 +13,9 @@ namespace KCHC
     {
         private Models.Artist ShownArtist { get; set; } = new Models.Artist();
         private string selectedSong = string.Empty;
+        private bool isPlaying = false;
+        private Button playButton;
+        private double lastPlaybackPosition = 0;
 
         public ArtistPage()
         {
@@ -26,14 +29,14 @@ namespace KCHC
             {
                 case "Taratsa Paradeisou":
                     {
-                        DependencyService.Get<IAudio>().PlayAudioFile("emo.mp3");
+                        DependencyService.Get<IAudio>().PlayAudioFile("emo");
                         break;
                     }
                 case "Pizza Boston":
                     {
                         List<string> artistsongs = new List<string>();
-                        artistsongs.Add("PizzaBoston_60K100.mp3");
-                        artistsongs.Add("PizzaBoston_Denthaseswseikaneis.mp3");
+                        artistsongs.Add("PizzaBoston_60K100");
+                        artistsongs.Add("PizzaBoston_Denthaseswseikaneis");
                         InitializeAudioControls(artistsongs);
                         break; 
                     }
@@ -50,7 +53,9 @@ namespace KCHC
         // Initialize common audio controls
         private void InitializeAudioControls(List<string> ArtistSongs)
         {
-            foreach(string song in ArtistSongs)
+            int rowCounter = 0;
+
+            foreach (string song in ArtistSongs)
             {
                 RadioButton songRadioButt = new RadioButton();
                 songRadioButt.Content = song;
@@ -58,40 +63,111 @@ namespace KCHC
                 {
                     if (songRadioButt.IsChecked)
                     {
-                        selectedSong = songRadioButt.Content.ToString();
+                        selectedSong = songRadioButt.ContentAsString();
                     }
                 };
+
+                // Set the row for the radio button
+                Grid.SetRow(songRadioButt, rowCounter);
+
+                // Increment the row counter for the next control
+                rowCounter++;
+
                 GridForMusic.Children.Add(songRadioButt);
             }
 
-            Button playButton = new Button
+            Slider positionSlider = new Slider
             {
-                Text = "Play",
-                Command = new Command(() => DependencyService.Get<IAudio>().PlayAudioFile(selectedSong))
+                Minimum = 0,
+                Value = 0
             };
 
-            
+            // Set the row for the slider
+            Grid.SetRow(positionSlider, rowCounter);
+
+            // Increment the row counter for the next control
+            rowCounter++;
+
+            Label durationLabel = new Label
+            {
+                Text = "0:00", // Initial text, you may update it dynamically
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+            };
+
+            // Set the row for the duration label
+            Grid.SetRow(durationLabel, rowCounter);
+
+            // Increment the row counter for the next control
+            rowCounter++;
+
+            positionSlider.ValueChanged += (sender, e) =>
+            {
+                DependencyService.Get<IAudio>().SeekTo((int)e.NewValue);
+
+                // Update the duration label based on the slider position
+                TimeSpan timeSpan = TimeSpan.FromMilliseconds(e.NewValue);
+                durationLabel.Text = $"{(int)timeSpan.TotalMinutes}:{timeSpan.Seconds:D2}";
+            };
+
+
+            playButton = new Button
+            {
+                Text = "Play",
+                Command = new Command(() =>
+                {
+                    if (!isPlaying)
+                    {
+                        // Resume playback from the last position if available
+                        if (lastPlaybackPosition > 0)
+                        {
+                            DependencyService.Get<IAudio>().SeekTo((int)lastPlaybackPosition);
+                            lastPlaybackPosition = 0; // Reset the last playback position
+                        }
+                        else
+                        {
+                            DependencyService.Get<IAudio>().PlayAudioFile(selectedSong);
+
+                            // Set the Maximum property after starting playback
+                            positionSlider.Maximum = DependencyService.Get<IAudio>().GetDuration();
+                        }
+
+                        isPlaying = true; // Update the playback state
+                        playButton.Text = "Pause"; // Change button text to "Pause"
+                    }
+                    else
+                    {
+                        DependencyService.Get<IAudio>().PauseAudio();
+                        isPlaying = false; // Update the playback state
+                        playButton.Text = "Play"; // Change button text to "Play"
+
+                        // Store the current playback position when pausing
+                        lastPlaybackPosition = positionSlider.Value;
+                    }
+                })
+            };
+
+            // Set the row for the play button
+            Grid.SetRow(playButton, rowCounter);
+
+            // Increment the row counter for the next control
+            rowCounter++;
+
             Button pauseButton = new Button
             {
                 Text = "Pause",
                 Command = new Command(() => DependencyService.Get<IAudio>().PauseAudio())
             };
 
-            Slider positionSlider = new Slider
-            {
-                Minimum = 0,
-                Maximum = DependencyService.Get<IAudio>().GetDuration(),
-                Value = 0
-            };
+            // Set the row for the pause button
+            Grid.SetRow(pauseButton, rowCounter);
 
-            positionSlider.ValueChanged += (sender, e) =>
-            {
-                DependencyService.Get<IAudio>().SeekTo((int)e.NewValue);
-            };
+            // Increment the row counter for the next control
+            rowCounter++;
 
+            GridForMusic.Children.Add(positionSlider);
+            GridForMusic.Children.Add(durationLabel);
             GridForMusic.Children.Add(playButton);
             GridForMusic.Children.Add(pauseButton);
-            GridForMusic.Children.Add(positionSlider);
         }
 
         // Helper method to create a social media button with an image

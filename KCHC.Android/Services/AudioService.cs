@@ -19,8 +19,8 @@ namespace KCHC.Droid
         public void PlayAudioFile(string fileName)
         {
             var context = global::Android.App.Application.Context;
-            // Assuming "emo" is a resource in the Raw folder
-            var resourceId = context.Resources.GetIdentifier(fileName, "raw", context.PackageName);
+
+            var resourceId = (int)typeof(Resource.Raw).GetField(fileName)?.GetValue(null);
             var fd = context.Resources.OpenRawResourceFd(resourceId);
 
             player.Prepared += (s, e) =>
