@@ -4,6 +4,7 @@ using Xamarin.Essentials;
 using System;
 using KCHC.Models;
 using KCHC.Interfaces;
+using System.Collections.Generic;
 
 namespace KCHC
 {
@@ -11,6 +12,8 @@ namespace KCHC
     public partial class ArtistPage : ContentPage
     {
         private Models.Artist ShownArtist { get; set; } = new Models.Artist();
+        private string selectedSong = string.Empty;
+
         public ArtistPage()
         {
             InitializeComponent();
@@ -26,8 +29,71 @@ namespace KCHC
                         DependencyService.Get<IAudio>().PlayAudioFile("emo.mp3");
                         break;
                     }
+                case "Pizza Boston":
+                    {
+                        List<string> artistsongs = new List<string>();
+                        artistsongs.Add("PizzaBoston_60K100.mp3");
+                        artistsongs.Add("PizzaBoston_Denthaseswseikaneis.mp3");
+                        InitializeAudioControls(artistsongs);
+                        break; 
+                    }
+
             }
+
         }
+        public static string MillisecondsToTimeString(int milliseconds)
+        {
+            TimeSpan timeSpan = TimeSpan.FromMilliseconds(milliseconds);
+            return $"{(int)timeSpan.TotalMinutes:D2}:{timeSpan.Seconds:D2}";
+        }
+
+        // Initialize common audio controls
+        private void InitializeAudioControls(List<string> ArtistSongs)
+        {
+            foreach(string song in ArtistSongs)
+            {
+                RadioButton songRadioButt = new RadioButton();
+                songRadioButt.Content = song;
+                songRadioButt.CheckedChanged += (s, e) =>
+                {
+                    if (songRadioButt.IsChecked)
+                    {
+                        selectedSong = songRadioButt.Content.ToString();
+                    }
+                };
+                GridForMusic.Children.Add(songRadioButt);
+            }
+
+            Button playButton = new Button
+            {
+                Text = "Play",
+                Command = new Command(() => DependencyService.Get<IAudio>().PlayAudioFile(selectedSong))
+            };
+
+            
+            Button pauseButton = new Button
+            {
+                Text = "Pause",
+                Command = new Command(() => DependencyService.Get<IAudio>().PauseAudio())
+            };
+
+            Slider positionSlider = new Slider
+            {
+                Minimum = 0,
+                Maximum = DependencyService.Get<IAudio>().GetDuration(),
+                Value = 0
+            };
+
+            positionSlider.ValueChanged += (sender, e) =>
+            {
+                DependencyService.Get<IAudio>().SeekTo((int)e.NewValue);
+            };
+
+            GridForMusic.Children.Add(playButton);
+            GridForMusic.Children.Add(pauseButton);
+            GridForMusic.Children.Add(positionSlider);
+        }
+
         // Helper method to create a social media button with an image
         private Button CreateSocialButton(string imageName, string url)
         {
@@ -51,7 +117,6 @@ namespace KCHC
 
         public void ShowPage(Models.Artist artist)
         {
-            
             ShownArtist = artist;
             BindingContext = artist;
             ImageArtist.Source = artist.PhotoPath;

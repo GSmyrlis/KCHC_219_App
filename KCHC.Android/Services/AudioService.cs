@@ -20,7 +20,7 @@ namespace KCHC.Droid
         {
             var context = global::Android.App.Application.Context;
             // Assuming "emo" is a resource in the Raw folder
-            var resourceId = context.Resources.GetIdentifier("emo", "raw", context.PackageName);
+            var resourceId = context.Resources.GetIdentifier(fileName, "raw", context.PackageName);
             var fd = context.Resources.OpenRawResourceFd(resourceId);
 
             player.Prepared += (s, e) =>
@@ -30,11 +30,23 @@ namespace KCHC.Droid
 
             player.SetDataSource(fd.FileDescriptor, fd.StartOffset, fd.Length);
             player.Prepare();
+
         }
 
         public void PauseAudio()
         {
             player.Pause();
         }
+
+        public double GetDuration()
+        {
+            return player.Duration;
+        }
+
+        public void SeekTo(int position)
+        {
+            player.SeekTo(position);
+        }
+
     }
-}
+}   

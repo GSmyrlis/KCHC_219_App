@@ -8,5 +8,7 @@ namespace KCHC.Interfaces
     {
         void PlayAudioFile(string fileName);
         void PauseAudio();
+        double GetDuration();
+        void SeekTo(int position);
     }
 }
