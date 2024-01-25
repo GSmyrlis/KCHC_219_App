@@ -5,6 +5,7 @@ using System;
 using KCHC.Models;
 using KCHC.Interfaces;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace KCHC
 {
@@ -15,7 +16,6 @@ namespace KCHC
         private string selectedSong = string.Empty;
         private bool isPlaying = false;
         private Button playButton;
-        private double lastPlaybackPosition = 0;
 
         public ArtistPage()
         {
@@ -64,6 +64,7 @@ namespace KCHC
                     if (songRadioButt.IsChecked)
                     {
                         selectedSong = songRadioButt.ContentAsString();
+                        DependencyService.Get<IAudio>().Reset();
                     }
                 };
 
@@ -74,6 +75,11 @@ namespace KCHC
                 rowCounter++;
 
                 GridForMusic.Children.Add(songRadioButt);
+            }
+
+            if (GridForMusic.Children.Count > 0 && GridForMusic.Children[0] is RadioButton firstRadioButton)
+            {
+                firstRadioButton.IsChecked = true;
             }
 
             Slider positionSlider = new Slider
@@ -100,31 +106,78 @@ namespace KCHC
             // Increment the row counter for the next control
             rowCounter++;
 
-            positionSlider.ValueChanged += (sender, e) =>
+            positionSlider.ValueChanged += async (sender, e) =>
             {
-                DependencyService.Get<IAudio>().SeekTo((int)e.NewValue);
-
-                // Update the duration label based on the slider position
-                TimeSpan timeSpan = TimeSpan.FromMilliseconds(e.NewValue);
-                durationLabel.Text = $"{(int)timeSpan.TotalMinutes}:{timeSpan.Seconds:D2}";
+                await Task.Run(() =>
+                {
+                    // Update the UI on the main thread
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        // Update the duration label based on the slider position
+                        TimeSpan timeSpan = TimeSpan.FromMilliseconds(e.NewValue);
+                        durationLabel.Text = $"{(int)timeSpan.TotalMinutes}:{timeSpan.Seconds:D2}";
+                    });
+                });
             };
 
+            positionSlider.DragStarted += async (sender, e) =>
+            {
+                await Task.Run(() =>
+                {
+                    // Update the UI on the main thread
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        isPlaying = false;
+                    });
+                });
+            };
+            positionSlider.DragCompleted += async (sender, e) =>
+            {
+                await Task.Run(() =>
+                {
+                    // Update the UI on the main thread
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        isPlaying = true;
+                        DependencyService.Get<IAudio>().SeekTo((int)positionSlider.Value);
 
+                        // Update the duration label based on the slider position
+                        TimeSpan timeSpan = TimeSpan.FromMilliseconds(positionSlider.Value);
+                        durationLabel.Text = $"{(int)timeSpan.TotalMinutes}:{timeSpan.Seconds:D2}";
+                    });
+                });
+            };
+
+            System.Threading.Timer updateTimer = new System.Threading.Timer(state =>
+            {
+                if (isPlaying)
+                {
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        int currentPosition = DependencyService.Get<IAudio>().GetCurrentPosition();
+                        positionSlider.Value = currentPosition;
+                        // Update the duration label based on the slider position
+                        TimeSpan timeSpan = TimeSpan.FromMilliseconds(currentPosition);
+                        durationLabel.Text = $"{(int)timeSpan.TotalMinutes}:{timeSpan.Seconds:D2}";
+                    });
+                }
+            }, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(1000)); // Update every 1 second
             playButton = new Button
             {
-                Text = "Play",
+                ImageSource = "play.png",
                 Command = new Command(() =>
                 {
                     if (!isPlaying)
                     {
                         // Resume playback from the last position if available
-                        if (lastPlaybackPosition > 0)
+                        if (positionSlider.Value > 0)
                         {
-                            DependencyService.Get<IAudio>().SeekTo((int)lastPlaybackPosition);
-                            lastPlaybackPosition = 0; // Reset the last playback position
+                            DependencyService.Get<IAudio>().PlayFromSpecificTime(selectedSong, (int)positionSlider.Value);
+                            positionSlider.Value = 0; // Reset the last playback position
                         }
                         else
                         {
+                            DependencyService.Get<IAudio>().Reset();
                             DependencyService.Get<IAudio>().PlayAudioFile(selectedSong);
 
                             // Set the Maximum property after starting playback
@@ -132,16 +185,13 @@ namespace KCHC
                         }
 
                         isPlaying = true; // Update the playback state
-                        playButton.Text = "Pause"; // Change button text to "Pause"
+                        playButton.ImageSource = "Pause.png"; // Change button text to "Pause"
                     }
                     else
                     {
+                        isPlaying = false;
                         DependencyService.Get<IAudio>().PauseAudio();
-                        isPlaying = false; // Update the playback state
-                        playButton.Text = "Play"; // Change button text to "Play"
-
-                        // Store the current playback position when pausing
-                        lastPlaybackPosition = positionSlider.Value;
+                        playButton.ImageSource = "play.png"; // Change button text to "Play"
                     }
                 })
             };
@@ -151,23 +201,9 @@ namespace KCHC
 
             // Increment the row counter for the next control
             rowCounter++;
-
-            Button pauseButton = new Button
-            {
-                Text = "Pause",
-                Command = new Command(() => DependencyService.Get<IAudio>().PauseAudio())
-            };
-
-            // Set the row for the pause button
-            Grid.SetRow(pauseButton, rowCounter);
-
-            // Increment the row counter for the next control
-            rowCounter++;
-
             GridForMusic.Children.Add(positionSlider);
             GridForMusic.Children.Add(durationLabel);
             GridForMusic.Children.Add(playButton);
-            GridForMusic.Children.Add(pauseButton);
         }
 
         // Helper method to create a social media button with an image
