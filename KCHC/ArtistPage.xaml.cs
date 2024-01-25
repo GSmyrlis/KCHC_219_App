@@ -29,6 +29,7 @@ namespace KCHC
             {
                 case "Taratsa Paradeisou":
                     {
+                        DependencyService.Get<IAudio>().Reset();
                         DependencyService.Get<IAudio>().PlayAudioFile("emo");
                         break;
                     }
