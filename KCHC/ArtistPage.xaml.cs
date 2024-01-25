@@ -40,6 +40,21 @@ namespace KCHC
                         InitializeAudioControls(artistsongs);
                         break; 
                     }
+                case "Words Of Hate":
+                    {
+                        List<string> artistsongs = new List<string>();
+                        artistsongs.Add("WordsOfHate_Barricade_live");
+                        artistsongs.Add("WordsOfHate_Siwph_live");
+                        InitializeAudioControls(artistsongs);
+                        break;
+                    }
+                case "Aχώνευτοι":
+                    {
+                        List<string> artistsongs = new List<string>();
+                        artistsongs.Add("Axoneutoi_Cassetetape");
+                        InitializeAudioControls(artistsongs);
+                        break;
+                    }
 
             }
 
