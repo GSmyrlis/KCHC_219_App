@@ -10,7 +10,7 @@
                         <RowDefinition Height="60" />
                         <!-- Row for Connections -->
                     </Grid.RowDefinitions>
-            <StackLayout x:Name="StackAll" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="StackAll" VerticalOptions="FillAndExpand" BackgroundColor="Black">
                 <Image x:Name="ImageArtist" Source="kchc.ico" HeightRequest="150" Aspect="AspectFit" VerticalOptions="Start"/>
                 <StackLayout x:Name="GridForData" VerticalOptions="Fill" Spacing="30">
                     <!-- Artist Name -->
