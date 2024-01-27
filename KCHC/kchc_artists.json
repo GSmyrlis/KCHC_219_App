@@ -16,11 +16,20 @@
     "ExtraDescription": "Συναισθηματικό ραπ κατευθείαν από το καζάνι της τρέλας για ερωτικούς, αιρετικούς και τρελούς που είναι τουλάχιστον ευτυχείς."
   },
   {
+    "Name": "Kontses",
+    "PhotoPath": "Kontses.jpg",
+    "Description": "Epic, Soundtrack, Neo-Classical",
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/3clCYTC9LLks4uKkfjOhZ6?si=nQjAyfPpTBqDzjhK1HdwJw",
+    "YoutubeAccountUrl": "https://www.youtube.com/channel/UC5oJrIdeqDJwTkQ3SucN6VA",
+    "ExtraDescription": "I'm a composer who mainly creates Epic Music, Soundtrack Music and Minimal Music. My dream is to write music for film..!!!"
+  },
+  {
     "Name": "Kryptic Lynch Gang",
     "PhotoPath": "KRypticLynchGang.jpg",
     "Description": "Autistic Raps",
     "YoutubeAccountUrl": "https://www.youtube.com/watch?v=FCtm7t4ab7o",
-    "ExtraDescription": "AκυκλοaφορυταRαππουθασεκανουνναπειςΑμανΠαναγιτσαμου."
+    "ExtraDescription": "AκυκλοaφορυταRαππουθασεκανουνναπειςΑμανΠαναγιτσαμου.",
+    "IsABand": true
   },
   {
     "Name": "Libys",
@@ -109,7 +118,6 @@
     "IsABand": true
   },
   {
-
     "Name": "Aχώνευτοι",
     "PhotoPath": "Agxoneytoi",
     "Description": "Punk Rock",
