@@ -111,6 +111,15 @@
     "YoutubeAccountUrl": "https://www.youtube.com/channel/UCzNawIaqEx0rQ87S8v5uYRg"
   },
   {
+    "Name": "Theios Karaflesas",
+    "PhotoPath": "TheiosKaraflessas.png",
+    "Description": "Music and Videogames Streaming",
+    "ExtraDescription": "Tsitser Mitser turking over the sounds of Bouzouki",
+    "IsABand": true,
+    "TrovoAccountUrl": "https://trovo.live/s/Theios_Karaflesas",
+    "TwitchAccountUrl": "https://www.twitch.tv/theios_karaflesas"
+  },
+  {
     "Name": "Words Of Hate",
     "PhotoPath": "wordsofhate.jpg",
     "Description": "Hardcore Punk from Katerini est.2015",

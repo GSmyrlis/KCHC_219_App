@@ -287,6 +287,16 @@ namespace KCHC
                 Button buttonSoundcloud = CreateSocialButton("soundcloud.png", artist.SoundcloudAccountUrl);
                 GridForConnections.Children.Add(buttonSoundcloud, count++, 0);
             }
+            if (!string.IsNullOrEmpty(artist.TwitchAccountUrl))
+            {
+                Button buttonTwitch = CreateSocialButton("twitch.png", artist.TwitchAccountUrl);
+                GridForConnections.Children.Add(buttonTwitch, count++, 0);
+            }
+            if (!string.IsNullOrEmpty(artist.TrovoAccountUrl))
+            {
+                Button buttonTrovo = CreateSocialButton("trovo.png", artist.TrovoAccountUrl);
+                GridForConnections.Children.Add(buttonTrovo, count++, 0);
+            }
         }
 
         private void OnSwipe(object sender, SwipedEventArgs e)
