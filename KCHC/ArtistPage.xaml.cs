@@ -6,6 +6,7 @@ using KCHC.Models;
 using KCHC.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.ComponentModel.Design;
 
 namespace KCHC
 {
@@ -21,54 +22,17 @@ namespace KCHC
         {
             InitializeComponent();
         }
+
         public ArtistPage(Models.Artist artist)
         {
             InitializeComponent();
             ShowPage(artist);
-            switch (ShownArtist.Name)
-            {
-                case "Taratsa Paradeisou":
-                    {
-                        DependencyService.Get<IAudio>().Reset();
-                        DependencyService.Get<IAudio>().PlayAudioFile("emo");
-                        break;
-                    }
-                case "Pizza Boston":
-                    {
-                        List<string> artistsongs = new List<string>();
-                        artistsongs.Add("PizzaBoston_60K100");
-                        artistsongs.Add("PizzaBoston_Denthaseswseikaneis");
-                        InitializeAudioControls(artistsongs);
-                        break; 
-                    }
-                case "Words Of Hate":
-                    {
-                        List<string> artistsongs = new List<string>();
-                        artistsongs.Add("WordsOfHate_Barricade_live");
-                        artistsongs.Add("WordsOfHate_Siwph_live");
-                        InitializeAudioControls(artistsongs);
-                        break;
-                    }
-                case "Aχώνευτοι":
-                    {
-                        List<string> artistsongs = new List<string>();
-                        artistsongs.Add("Axoneutoi_Cassetetape");
-                        InitializeAudioControls(artistsongs);
-                        break;
-                    }
-
-            }
-
-        }
-        public static string MillisecondsToTimeString(int milliseconds)
-        {
-            TimeSpan timeSpan = TimeSpan.FromMilliseconds(milliseconds);
-            return $"{(int)timeSpan.TotalMinutes:D2}:{timeSpan.Seconds:D2}";
         }
 
         // Initialize common audio controls
         private void InitializeAudioControls(List<string> ArtistSongs)
         {
+            GridForMusic.Children.Clear();
             int rowCounter = 0;
 
             foreach (string song in ArtistSongs)
@@ -242,10 +206,48 @@ namespace KCHC
                 })
             };
         }
-
+        public void LoadPagesDifferences()
+        {
+            switch (ShownArtist.Name)
+            {
+                case "Taratsa Paradeisou":
+                    {
+                        DependencyService.Get<IAudio>().Reset();
+                        DependencyService.Get<IAudio>().PlayAudioFile("emo");
+                        break;
+                    }
+                case "Pizza Boston":
+                    {
+                        DependencyService.Get<IAudio>().Reset();
+                        List<string> artistsongs = new List<string>();
+                        artistsongs.Add("PizzaBoston_60K100");
+                        artistsongs.Add("PizzaBoston_Denthaseswseikaneis");
+                        InitializeAudioControls(artistsongs);
+                        break;
+                    }
+                case "Words Of Hate":
+                    {
+                        DependencyService.Get<IAudio>().Reset();
+                        List<string> artistsongs = new List<string>();
+                        artistsongs.Add("WordsOfHate_Barricade_live");
+                        artistsongs.Add("WordsOfHate_Siwph_live");
+                        InitializeAudioControls(artistsongs);
+                        break;
+                    }
+                case "Aχώνευτοι":
+                    {
+                        DependencyService.Get<IAudio>().Reset();
+                        List<string> artistsongs = new List<string>();
+                        artistsongs.Add("Axoneutoi_Cassetetape");
+                        InitializeAudioControls(artistsongs);
+                        break;
+                    }
+            }
+        }
         public void ShowPage(Models.Artist artist)
         {
             ShownArtist = artist;
+            LoadPagesDifferences();
             BindingContext = artist;
             ImageArtist.Source = artist.PhotoPath;
             if (artist.DateTime != null && artist.DateTime != System.DateTime.MinValue)
