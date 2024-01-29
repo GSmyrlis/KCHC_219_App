@@ -68,6 +68,19 @@
     "BandCampAccountUrl": "https://maydayofc.bandcamp.com/"
   },
   {
+    "Name": "Nurgle",
+    "PhotoPath": "Nurgle.jpg",
+    "Description": "Satanic black metal",
+    "ExtraDescription": "Nurgle is an act of 2 formed to spread the words of selfawareness,despair,chaos and victory.\nWhat you're witnessing as mountain might be the tip of the iceberg.\nVocals: Rakshas, Instruments: Gaiseric",
+    "BandCampAccountUrl": "https://nurglechaosuprema.bandcamp.com/"
+  },
+  {
+    "Name": "OLYMPUS",
+    "PhotoPath": "olympus.jpg",
+    "Description": "Katerinian Hard as Fuck Tough Guy Malicius Murderous Hardcore",
+    "ExtraDescription": "Thanos 'Mengelit' - Murderous Raps\nSpiridonas - Apeshit Music and Unholy Screams"
+  },
+  {
     "Name": "Pizza Boston",
     "PhotoPath": "PizzaBoston.jpg",
     "Description": "Hardcore punk",

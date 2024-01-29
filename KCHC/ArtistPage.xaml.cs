@@ -216,6 +216,14 @@ namespace KCHC
                         DependencyService.Get<IAudio>().PlayAudioFile("emo");
                         break;
                     }
+                case "OLYMPUS":
+                    {
+                        DependencyService.Get<IAudio>().Reset();
+                        List<string> artistsongs = new List<string>();
+                        artistsongs.Add("olympus");
+                        InitializeAudioControls(artistsongs);
+                        break;
+                    }
                 case "Pizza Boston":
                     {
                         DependencyService.Get<IAudio>().Reset();
