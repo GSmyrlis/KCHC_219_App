@@ -16691,64 +16691,70 @@ namespace KCHC.Droid
 			public const int notify_panel_notification_icon_bg = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int Pause = 2131165337;
+			public const int Nurgle = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int PizzaBoston = 2131165338;
+			public const int olympus = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int play = 2131165339;
+			public const int Pause = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int preference_list_divider_material = 2131165340;
+			public const int PizzaBoston = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int SAD = 2131165341;
+			public const int play = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int SOR = 2131165342;
+			public const int preference_list_divider_material = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int soundcloud = 2131165343;
+			public const int SAD = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int spotify = 2131165344;
+			public const int SOR = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int Spyridwn = 2131165345;
+			public const int soundcloud = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int Stenahoria = 2131165346;
+			public const int spotify = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int TaratsaParadeisou = 2131165347;
+			public const int Spyridwn = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int test_custom_background = 2131165348;
+			public const int Stenahoria = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int TheiosKaraflessas = 2131165349;
+			public const int TaratsaParadeisou = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int theosxarhs = 2131165350;
+			public const int test_custom_background = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int tooltip_frame_dark = 2131165351;
+			public const int TheiosKaraflessas = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int tooltip_frame_light = 2131165352;
+			public const int theosxarhs = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int trovo = 2131165353;
+			public const int tooltip_frame_dark = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int twitch = 2131165354;
+			public const int tooltip_frame_light = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int wordsofhate = 2131165355;
+			public const int trovo = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int youtube = 2131165356;
+			public const int twitch = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int wordsofhate = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int youtube = 2131165358;
 			
 			static Drawable()
 			{
@@ -18896,19 +18902,22 @@ namespace KCHC.Droid
 			public const int emo = 2131623937;
 			
 			// aapt resource value: 0x7F0E0002
-			public const int PizzaBoston_60K100 = 2131623938;
+			public const int olympus = 2131623938;
 			
 			// aapt resource value: 0x7F0E0003
-			public const int PizzaBoston_Denthaseswseikaneis = 2131623939;
+			public const int PizzaBoston_60K100 = 2131623939;
 			
 			// aapt resource value: 0x7F0E0004
-			public const int Thanos = 2131623940;
+			public const int PizzaBoston_Denthaseswseikaneis = 2131623940;
 			
 			// aapt resource value: 0x7F0E0005
-			public const int WordsOfHate_Barricade_live = 2131623941;
+			public const int Thanos = 2131623941;
 			
 			// aapt resource value: 0x7F0E0006
-			public const int WordsOfHate_Siwph_live = 2131623942;
+			public const int WordsOfHate_Barricade_live = 2131623942;
+			
+			// aapt resource value: 0x7F0E0007
+			public const int WordsOfHate_Siwph_live = 2131623943;
 			
 			static Raw()
 			{
