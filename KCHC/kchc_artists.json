@@ -116,14 +116,6 @@
     "ExtraDescription": "A 4 piece hardcore band from Katerini est. 2014 Gio-Vocals George-Drums Soc-Guitar Chris-Bass K.CITY HARDCORE. -219-"
   },
   {
-    "Name": "Spyridon",
-    "PhotoPath": "Spyridwn.JPG",
-    "Description": "Hard Indie Metal",
-    "SpotifyAccountUrl": "https://open.spotify.com/artist/12PgN4K4tut8SunQ9fBn76",
-    "YoutubeAccountUrl": "https://youtu.be/HaW5fOSwCOo?si=Gz-fO1wWx7xLP7J8",
-    "ExtraDescription": "Dark hard indie Metal for those who are chosen. Created by Spyros Kreator"
-  },
-  {
     "Name": "Taratsa Paradeisou",
     "PhotoPath": "TaratsaParadeisou.jpg",
     "Description": "Indie EMO",
@@ -169,6 +161,14 @@
     "ExtraDescription": "Δημελές DIY Grindcore/Hardcore Punk σχήμα κατευθείαν από την κωλότρυπα της Νέας Νότιας Μακεδονίας",
     "IsABand": true,
     "BandCampAccountUrl": "https://theoharis.bandcamp.com/album/storage-room-rehearsal"
+  },
+  {
+    "Name": "Σπυρίδωνας",
+    "PhotoPath": "Spyridwn.JPG",
+    "Description": "Hard Indie Metal",
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/12PgN4K4tut8SunQ9fBn76",
+    "YoutubeAccountUrl": "https://youtu.be/HaW5fOSwCOo?si=Gz-fO1wWx7xLP7J8",
+    "ExtraDescription": "Dark hard indie Metal for those who are chosen. Created by Spyros Kreator"
   },
   {
     "Name": "Στεναχώρια χαμηλής ποιότητας",
