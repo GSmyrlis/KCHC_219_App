@@ -58,9 +58,9 @@ namespace KCHC
                             return;
                         }
 
-                        string message = "New Edition Available magkakia. Katevaste apo edw";
+                        string message = "New Edition Available atomakia mou. Ebistepsou me kai katevaste thn nea ekdosi apo edw:";
                         string url = "https://github.com/GSmyrlis/KCHC_219_App/tags";
-                        bool closePopup = await DisplayAlert("Popup Title", message + "\n\nURL: " + url, "Close", "Open URL");
+                        bool closePopup = await DisplayAlert("Anakoinwsh", message + "\n\nURL: " + url, "Close", "Open URL");
                         if (!closePopup)
                         {
                             // Open the URL if the user chooses not to close the popup
