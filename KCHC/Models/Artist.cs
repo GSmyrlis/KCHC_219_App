@@ -13,9 +13,14 @@ namespace KCHC.Models
         public string SpotifyAccountUrl { get; set; } = string.Empty;
         public string YoutubeAccountUrl { get; set; } = string.Empty;
         public string BandCampAccountUrl { get; set; } = string.Empty;
+        public string SoundcloudAccountUrl { get; set; } = string.Empty;
+        public string TrovoAccountUrl { get; set; } = string.Empty;
+        public string TwitchAccountUrl { get; set; } = string.Empty;
         public string ExtraDescription { get; set; } = string.Empty;
+        public string SongkickUrl { get; set; } = string.Empty;
         public bool IsABand { get; set; } = false;
         public DateTime DateTime { get; set; } = DateTime.MinValue;
+        
 
         /// <summary>
         /// Not full Constructor. This constructor is only for first page

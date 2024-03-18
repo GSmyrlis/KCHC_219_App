@@ -6,24 +6,28 @@
     <Grid>
         <Image Source="kchc.ico" HeightRequest="300" Aspect="AspectFill"/>
         <Grid>
-            <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked"></Button>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                <!-- String to display "Thanatis Version" -->
+                <Label Text="Thanatis Version" FontSize="20" TextColor="Pink" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked"/>
+            </StackLayout>
             <Grid VerticalOptions="CenterAndExpand">
                 <!-- Custom Indicator Layout -->
-                <StackLayout x:Name="CustomIndicator" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" HeightRequest="5">
+                <StackLayout x:Name="CustomIndicator" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" HeightRequest="5">
                     <!-- Indicators will be added dynamically in code-behind -->
                 </StackLayout>
                 <!-- Additional Image in the top-right corner -->
-                <CarouselView x:Name="ArtistsCarousel" ItemsSource="{Binding Artists}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" InputTransparent="True">
+                <CarouselView x:Name="ArtistsCarousel" ItemsSource="{Binding}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" InputTransparent="True">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+                            <StackLayout Padding="10" VerticalOptions="StartAndExpand">
                                 <Image Source="{Binding PhotoPath}" HeightRequest="300" Aspect="AspectFit" VerticalOptions="CenterAndExpand">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnImageTapped" />
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                                <Label Text="{Binding Description}" FontSize="18" TextColor="White" HorizontalOptions="Center"/>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Description}" FontSize="20" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
                             </StackLayout>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
