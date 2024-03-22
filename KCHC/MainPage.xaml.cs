@@ -50,10 +50,7 @@ namespace KCHC
                         // Deserialize the JSON response to a list of Tag objects
                         List<Tag> tags = JsonConvert.DeserializeObject<List<Tag>>(responseBody);
 
-                        // Get the last tag
-                        string lastTag = tags.FirstOrDefault().tag; // Get the first tag     
-
-                        if (lastTag == "ver_0.2")
+                        if (tags.Count <= 2)
                         {
                             return;
                         }
