@@ -238,5 +238,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\DjApogoiteusi.JPG" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\FOA.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

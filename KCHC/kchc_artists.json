@@ -24,6 +24,15 @@
     "ExtraDescription": "I bought a TD-3, starting playing at parties, shook a lot of buttocks. Also cinephile."
   },
   {
+    "Name": "F.O.A.",
+    "PhotoPath": "FOA.jpg",
+    "Description": "Followers Of the Apocalypse",
+    "YoutubeAccountUrl": "https://youtu.be/aPdP1e8RbUM?si=Offw0wOjuZVwFiYO",
+    "BandCampAccountUrl": "https://foapieriaviolence.bandcamp.com/album/war-on-armageddon",
+    "ExtraDescription": "Vocals - MD\nGuitars and vocals - Spyridonas\nBass - Socswarm\nDrums - N.A.T.",
+    "IsABand": true
+  },
+  {
     "Name": "Killathea",
     "PhotoPath": "Killathea.jpg",
     "Description": "Emotional Rap",
