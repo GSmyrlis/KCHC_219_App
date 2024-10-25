@@ -6,11 +6,7 @@
     <Grid>
         <Image Source="kchc.ico" HeightRequest="300" Aspect="AspectFill"/>
         <Grid>
-            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
-                <!-- String to display "Thanatis Version" -->
-                <Label Text="Thanatis Version" FontSize="20" TextColor="Pink" HorizontalOptions="Start" VerticalOptions="Center" />
-                <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked"/>
-            </StackLayout>
+            <Button x:Name="KinimatoramaButton" ImageSource="Kinimatorama.jpg" HorizontalOptions="End" VerticalOptions="Start" Clicked="OnKinimatoramaImageClicked" />
             <Grid VerticalOptions="CenterAndExpand">
                 <!-- Custom Indicator Layout -->
                 <StackLayout x:Name="CustomIndicator" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" HeightRequest="5">
