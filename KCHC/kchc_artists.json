@@ -8,6 +8,31 @@
     "IsABand": true
   },
   {
+    "Name": "Cult Crush",
+    "PhotoPath": "CultCrush.png",
+    "Description": "Hardcock",
+    "YoutubeAccountUrl": "https://www.youtube.com/@cultcrush9375",
+    "ExtraDescription": "Spuros - Aris - Johan | 2021",
+    "IsABand": true
+  },
+  {
+    "Name": "Dj Apogoiteusi",
+    "PhotoPath": "DjApogoiteusi.JPG",
+    "Description": "Storytelling Techno",
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/0pzVCn7LZgwrTiYUtDjjxM?si=xgBnRLqfRMS0pCWNThD1zA",
+    "YoutubeAccountUrl": "https://youtu.be/y1shjZEhDu8?si=Y5acjnzuwume9Zlr",
+    "ExtraDescription": "I bought a TD-3, starting playing at parties, shook a lot of buttocks. Also cinephile."
+  },
+  {
+    "Name": "F.O.A.",
+    "PhotoPath": "FOA.jpg",
+    "Description": "Followers Of the Apocalypse",
+    "YoutubeAccountUrl": "https://youtu.be/aPdP1e8RbUM?si=Offw0wOjuZVwFiYO",
+    "BandCampAccountUrl": "https://foapieriaviolence.bandcamp.com/album/war-on-armageddon",
+    "ExtraDescription": "Vocals - MD\nGuitars and vocals - Spyridonas\nBass - Socswarm\nDrums - N.A.T.",
+    "IsABand": true
+  },
+  {
     "Name": "Killathea",
     "PhotoPath": "Killathea.jpg",
     "Description": "Emotional Rap",
@@ -72,7 +97,8 @@
     "PhotoPath": "Nathanael.jpg",
     "Description": "New Isolationism",
     "ExtraDescription": "Ambient Trance pastor to bridge the gap between your microcosm and reality",
-    "SpotifyAccountUrl": "https://open.spotify.com/artist/7g4U99RKjgefrNucrxCBJ6?si=_LRveAEKSBGf8qYc8OeLvg"
+    "SpotifyAccountUrl": "https://open.spotify.com/artist/7g4U99RKjgefrNucrxCBJ6?si=_LRveAEKSBGf8qYc8OeLvg",
+    "SoundcloudAccountUrl": "https://soundcloud.com/libys/sets/isolated-island"
   },
   {
     "Name": "Nurgle",
@@ -95,6 +121,14 @@
     "Description": "Hardcore punk",
     "IsABand": true,
     "ExtraDescription": "Ellhnofwno topikistiko KCHC apovrasma"
+  },
+  {
+    "Name": "PULL OUT",
+    "PhotoPath": "PullOut.jpg",
+    "Description": "Hatecore",
+    "IsABand": true,
+    "ExtraDescription": "Οι Pull Out σχηματίστηκαν από μέλοι του KCHC που δεν γνωρίζουμε με ακρίβεια αλλά είναι ο Σωκ και ο Σπύρος που ήθελαν να εκφράσουν την αγάπη τους για την Αθήνα και τους Αθηνέζους.",
+    "YoutubeAccountUrl": "https://www.youtube.com/watch?v=TBLQVqGTmS0"
   },
   {
     "Name": "S.A.D.",
@@ -177,6 +211,6 @@
     "SpotifyAccountUrl": "https://open.spotify.com/artist/27A7sKDEsFfyuvrTeRIHw3?si=eKM_9u8eQ8ynO_RkfMQe6A",
     "YoutubeAccountUrl": "https://youtu.be/R0D2jJ-tn-E?si=JafQTOHntyOf5lXJ",
     "BandCampAccountUrl": "https://libys.bandcamp.com/album/--2",
-    "ExtraDescription": "Libys' secret garden"
+    "ExtraDescription": "Όνομα και πράμα"
   }
 ]
