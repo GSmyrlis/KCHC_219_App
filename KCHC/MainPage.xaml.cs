@@ -50,12 +50,12 @@ namespace KCHC
                         // Deserialize the JSON response to a list of Tag objects
                         List<Tag> tags = JsonConvert.DeserializeObject<List<Tag>>(responseBody);
 
-                        if (tags.Count <= 2)
+                        if (tags.Count <= 3)
                         {
                             return;
                         }
 
-                        string message = "New Edition Available atomakia mou. Ebistepsou me kai katevaste thn nea ekdosi apo edw:";
+                        string message = "New Edition Available. Trust me ;) download from:";
                         string url = "https://github.com/GSmyrlis/KCHC_219_App/tags";
                         bool closePopup = await DisplayAlert("Anakoinwsh", message + "\n\nURL: " + url, "Close", "Open URL");
                         if (!closePopup)
